@@ -25,7 +25,6 @@ POM 引入
     <dependency>
         <groupId>link.thingscloud</groupId>
         <artifactId>freeswitch-cdr-spring-boot-starter</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
     </dependency>
 
 
