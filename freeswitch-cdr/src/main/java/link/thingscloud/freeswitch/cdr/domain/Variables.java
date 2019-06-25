@@ -15,7 +15,7 @@ import java.util.Map;
 @Data
 @Accessors(chain = true)
 public class Variables {
-    private Map<String, String> variables;
+    private Map<String, String> variableTable;
 
     /**
      * <p>putVariable.</p>
@@ -24,9 +24,9 @@ public class Variables {
      * @param value a {@link java.lang.String} object.
      */
     public void putVariable(String key, String value) {
-        if (variables == null) {
-            variables = new HashMap<>(256);
+        if (variableTable == null) {
+            variableTable = new HashMap<>(256);
         }
-        variables.put(key, value);
+        variableTable.put(key, value);
     }
 }

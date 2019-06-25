@@ -35,7 +35,7 @@ public class CdrHelper {
      * @return a {@link java.lang.String} object.
      */
     public static String getUserData(Cdr cdr) {
-        String userToUser = cdr.getVariables().getVariables().get(SIP_H_USER_TO_USER);
+        String userToUser = cdr.getVariables().getVariableTable().get(SIP_H_USER_TO_USER);
         if (StringUtils.isBlank(userToUser)) {
             return StringUtils.EMPTY;
         }

@@ -1,0 +1,367 @@
+<?xml version="1.0"?>
+<cdr core-uuid="21483469-cecc-4e5f-a9eb-0402e56193aa">
+  <channel_data>
+    <state>CS_REPORTING</state>
+    <direction>inbound
+	</direction>
+    <state_number>11</state_number>
+    <flags>0=1;1=1;3=1;36=1;37=1;39=1;42=1;47=1;52=1;73=1;110=1;111=1;115=1;117=1</flags>
+    <caps>1=1;2=1;3=1;4=1;5=1;6=1</caps>
+  </channel_data>
+  <variables>
+    <direction>inbound</direction>
+    <uuid>4b3b36af-3d98-4670-bc14-0ee08890d7d6</uuid>
+    <session_id>175</session_id>
+    <sip_from_user>anonymous</sip_from_user>
+    <sip_from_uri>anonymous%40wilcom.com.cn</sip_from_uri>
+    <sip_from_host>wilcom.com.cn</sip_from_host>
+    <channel_name>sofia/internal/anonymous%40wilcom.com.cn</channel_name>
+    <ep_codec_string>PCMU%408000h%4020i%4064000b,PCMA%408000h%4020i%4064000b</ep_codec_string>
+    <sip_local_network_addr>172.16.2.253</sip_local_network_addr>
+    <sip_network_ip>172.16.0.20</sip_network_ip>
+    <sip_network_port>25051</sip_network_port>
+    <sip_received_ip>172.16.0.20</sip_received_ip>
+    <sip_received_port>25051</sip_received_port>
+    <sip_via_protocol>tcp</sip_via_protocol>
+    <sip_authorized>true</sip_authorized>
+    <sip_acl_authed_by>domains</sip_acl_authed_by>
+    <sip_from_user_stripped>anonymous</sip_from_user_stripped>
+    <sofia_profile_name>internal</sofia_profile_name>
+    <recovery_profile_name>internal</recovery_profile_name>
+    <sip_cid_type>pid</sip_cid_type>
+    <sip_full_route>%3Csip%3A172.16.2.253%3A6060%3Btransport%3Dtcp%3Blr%3Bphase%3Dterminating%3E</sip_full_route>
+    <sip_invite_record_route>%3Csip%3A172.16.0.20%3Btransport%3Dtcp%3Blr%3E</sip_invite_record_route>
+    <sip_req_user>7010</sip_req_user>
+    <sip_req_uri>7010%40172.16.2.253</sip_req_uri>
+    <sip_req_host>172.16.2.253</sip_req_host>
+    <sip_to_user>7010</sip_to_user>
+    <sip_to_uri>7010%40172.16.2.253</sip_to_uri>
+    <sip_to_host>172.16.2.253</sip_to_host>
+    <sip_contact_params>transport%3Dtcp</sip_contact_params>
+    <sip_contact_user>nobody</sip_contact_user>
+    <sip_contact_uri>nobody%40172.16.0.20</sip_contact_uri>
+    <sip_contact_host>172.16.0.20</sip_contact_host>
+    <sip_user_agent>Avaya%20CM/R017x.01.0.532.0</sip_user_agent>
+    <sip_via_host>172.16.0.20</sip_via_host>
+    <sip_via_rport>25051</sip_via_rport>
+    <alert_info>%3Ccid%3Ainternal%40invalid.unknown.domain%3E%3Bavaya-cm-alert-type%3Dinternal</alert_info>
+    <presence_id>anonymous%40wilcom.com.cn</presence_id>
+    <sip_Privacy>id</sip_Privacy>
+    <sip_history_info>%3Csip%3A7010%40172.16.2.253%3E%3Bindex%3D1,%20%227010%22%20%3Csip%3A7010%40172.16.2.253%3E%3Bindex%3D1.1</sip_history_info>
+    <sip_h_User-to-User>00FA080064025C5CFF3B00%3Bencoding%3Dhex</sip_h_User-to-User>
+    <RECORD_STEREO>true</RECORD_STEREO>
+    <rtp_use_codec_string>OPUS,G722,PCMU,PCMA,GSM</rtp_use_codec_string>
+    <rtp_use_codec_name>PCMU</rtp_use_codec_name>
+    <rtp_use_codec_rate>8000</rtp_use_codec_rate>
+    <rtp_use_codec_ptime>20</rtp_use_codec_ptime>
+    <rtp_last_audio_codec_string>PCMU%408000h%4020i</rtp_last_audio_codec_string>
+    <read_codec>PCMU</read_codec>
+    <original_read_codec>PCMU</original_read_codec>
+    <read_rate>8000</read_rate>
+    <original_read_rate>8000</original_read_rate>
+    <write_codec>PCMU</write_codec>
+    <write_rate>8000</write_rate>
+    <rtp_use_pt>0</rtp_use_pt>
+    <rtp_use_ssrc>3775073926</rtp_use_ssrc>
+    <max_forwards>69</max_forwards>
+    <transfer_history>1560230118%3Afda27ede-2bef-401c-acef-85fd33f63071%3Abl_xfer%3A915121007938/default/xml</transfer_history>
+    <transfer_source>1560230118%3Afda27ede-2bef-401c-acef-85fd33f63071%3Abl_xfer%3A915121007938/default/xml</transfer_source>
+    <DP_MATCH>915121007938</DP_MATCH>
+    <DP_MATCH>915121007938</DP_MATCH>
+    <call_uuid>4b3b36af-3d98-4670-bc14-0ee08890d7d6</call_uuid>
+    <callee>915121007938</callee>
+    <sip_h_caller>anonymous</sip_h_caller>
+    <sip_h_callee>915121007938</sip_h_callee>
+    <sip_h_ocallId>4b3b36af-3d98-4670-bc14-0ee08890d7d6</sip_h_ocallId>
+    <da>true</da>
+    <effective_caller_id_number>anonymous</effective_caller_id_number>
+    <callerDomain>wilcom.com.cn</callerDomain>
+    <export_vars>callee,callee,sip_h_caller,sip_h_callee,sip_h_ocallId,da,callerDomain</export_vars>
+    <call_timeout>60</call_timeout>
+    <gateway>avaya</gateway>
+    <record_rate>8000</record_rate>
+    <record_sample_rate>8000</record_sample_rate>
+    <recording_follow_transfer>true</recording_follow_transfer>
+    <record_append>true</record_append>
+    <current_application_data>sofia/gateway/avaya/915121007938</current_application_data>
+    <current_application>bridge</current_application>
+    <inherit_codec>true</inherit_codec>
+    <originated_legs>4b32a965-e2fc-455e-8f46-eb723e8909fd%3BOutbound%20Call%3B915121007938</originated_legs>
+    <switch_m_sdp>v%3D0%0D%0Ao%3D-%201560230660%202%20IN%20IP4%20172.16.0.20%0D%0As%3D-%0D%0Ac%3DIN%20IP4%20172.16.0.14%0D%0Ab%3DAS%3A64%0D%0At%3D0%200%0D%0Am%3Daudio%2053400%20RTP/AVP%200%20101%0D%0Aa%3Drtpmap%3A101%20telephone-event/8000%0D%0Aa%3Dptime%3A20%0D%0A</switch_m_sdp>
+    <originate_disposition>SUCCESS</originate_disposition>
+    <DIALSTATUS>SUCCESS</DIALSTATUS>
+    <originate_causes>4b32a965-e2fc-455e-8f46-eb723e8909fd%3BNONE</originate_causes>
+    <last_bridge_to>4b32a965-e2fc-455e-8f46-eb723e8909fd</last_bridge_to>
+    <bridge_channel>sofia/external/915121007938</bridge_channel>
+    <bridge_uuid>4b32a965-e2fc-455e-8f46-eb723e8909fd</bridge_uuid>
+    <signal_bond>4b32a965-e2fc-455e-8f46-eb723e8909fd</signal_bond>
+    <rtp_local_sdp_str>v%3D0%0Ao%3DFreeSWITCH%201560204368%201560204370%20IN%20IP4%20172.16.2.253%0As%3DFreeSWITCH%0Ac%3DIN%20IP4%20172.16.2.253%0At%3D0%200%0Am%3Daudio%2025750%20RTP/AVP%200%20127%0Aa%3Drtpmap%3A0%20PCMU/8000%0Aa%3Drtpmap%3A127%20telephone-event/8000%0Aa%3Dfmtp%3A127%200-16%0Aa%3Dptime%3A20%0Aa%3Dsendrecv%0A</rtp_local_sdp_str>
+    <endpoint_disposition>ANSWER</endpoint_disposition>
+    <own_answer_stamp>1560230129541</own_answer_stamp>
+    <last_sent_callee_id_name>Outbound%20Call</last_sent_callee_id_name>
+    <last_sent_callee_id_number>915121007938</last_sent_callee_id_number>
+    <sip_to_tag>cBXQ86mZ18c9c</sip_to_tag>
+    <sip_from_tag>2a6190e8c941e983d60c29e8ce73</sip_from_tag>
+    <sip_cseq>2</sip_cseq>
+    <sip_call_id>2a6190368c941e983d70c29e8ce73</sip_call_id>
+    <sip_full_via>SIP/2.0/TCP%20172.16.0.20%3Bbranch%3Dz9hG4bK312b538e8c941e983df0c29e8ce73%3Brport%3D25051</sip_full_via>
+    <sip_recover_via>SIP/2.0/TCP%20172.16.0.20%3Bbranch%3Dz9hG4bK312b538e8c941e983df0c29e8ce73%3Brport%3D25051</sip_recover_via>
+    <sip_from_display>Gong,baicheng</sip_from_display>
+    <sip_full_from>%22Gong,baicheng%22%20%3Csip%3Aanonymous%40wilcom.com.cn%3E%3Btag%3D2a6190e8c941e983d60c29e8ce73</sip_full_from>
+    <sip_full_to>%3Csip%3A7010%40172.16.2.253%3E%3Btag%3DcBXQ86mZ18c9c</sip_full_to>
+    <switch_r_sdp>v%3D0%0D%0Ao%3D-%201560230660%202%20IN%20IP4%20172.16.0.20%0D%0As%3D-%0D%0Ac%3DIN%20IP4%20172.16.0.169%0D%0Ab%3DAS%3A64%0D%0At%3D0%200%0D%0Am%3Daudio%2030832%20RTP/AVP%200%20127%0D%0Aa%3Drtpmap%3A127%20telephone-event/8000%0D%0Aa%3Dptime%3A20%0D%0A</switch_r_sdp>
+    <rtp_audio_recv_pt>0</rtp_audio_recv_pt>
+    <dtmf_type>rfc2833</dtmf_type>
+    <rtp_2833_send_payload>127</rtp_2833_send_payload>
+    <rtp_2833_recv_payload>127</rtp_2833_recv_payload>
+    <remote_media_ip>172.16.0.169</remote_media_ip>
+    <remote_media_port>30832</remote_media_port>
+    <local_media_ip>172.16.2.253</local_media_ip>
+    <local_media_port>25750</local_media_port>
+    <advertised_media_ip>172.16.2.253</advertised_media_ip>
+    <sip_hangup_phrase>OK</sip_hangup_phrase>
+    <last_bridge_hangup_cause>NORMAL_CLEARING</last_bridge_hangup_cause>
+    <last_bridge_proto_specific_hangup_cause>sip%3A200</last_bridge_proto_specific_hangup_cause>
+    <bridge_hangup_cause>NORMAL_CLEARING</bridge_hangup_cause>
+    <record_seconds>20</record_seconds>
+    <record_ms>20980</record_ms>
+    <record_samples>167840</record_samples>
+    <hangup_cause>NORMAL_CLEARING</hangup_cause>
+    <hangup_cause_q850>16</hangup_cause_q850>
+    <digits_dialed>none</digits_dialed>
+    <start_stamp>2019-06-11%2013%3A15%3A18</start_stamp>
+    <profile_start_stamp>2019-06-11%2013%3A15%3A18</profile_start_stamp>
+    <answer_stamp>2019-06-11%2013%3A15%3A29</answer_stamp>
+    <bridge_stamp>2019-06-11%2013%3A15%3A20</bridge_stamp>
+    <progress_media_stamp>2019-06-11%2013%3A15%3A20</progress_media_stamp>
+    <end_stamp>2019-06-11%2013%3A15%3A40</end_stamp>
+    <start_epoch>1560230118</start_epoch>
+    <start_uepoch>1560230118216216</start_uepoch>
+    <profile_start_epoch>1560230118</profile_start_epoch>
+    <profile_start_uepoch>1560230118256214</profile_start_uepoch>
+    <answer_epoch>1560230129</answer_epoch>
+    <answer_uepoch>1560230129536210</answer_uepoch>
+    <bridge_epoch>1560230120</bridge_epoch>
+    <bridge_uepoch>1560230120356218</bridge_uepoch>
+    <last_hold_epoch>0</last_hold_epoch>
+    <last_hold_uepoch>0</last_hold_uepoch>
+    <hold_accum_seconds>0</hold_accum_seconds>
+    <hold_accum_usec>0</hold_accum_usec>
+    <hold_accum_ms>0</hold_accum_ms>
+    <resurrect_epoch>0</resurrect_epoch>
+    <resurrect_uepoch>0</resurrect_uepoch>
+    <progress_epoch>0</progress_epoch>
+    <progress_uepoch>0</progress_uepoch>
+    <progress_media_epoch>1560230120</progress_media_epoch>
+    <progress_media_uepoch>1560230120336250</progress_media_uepoch>
+    <end_epoch>1560230140</end_epoch>
+    <end_uepoch>1560230140276231</end_uepoch>
+    <last_app>bridge</last_app>
+    <last_arg>sofia/gateway/avaya/915121007938</last_arg>
+    <caller_id>%22Gong,baicheng%22%20%3Canonymous%3E</caller_id>
+    <duration>22</duration>
+    <billsec>11</billsec>
+    <progresssec>0</progresssec>
+    <answersec>11</answersec>
+    <waitsec>2</waitsec>
+    <progress_mediasec>2</progress_mediasec>
+    <flow_billsec>22</flow_billsec>
+    <mduration>22060</mduration>
+    <billmsec>10740</billmsec>
+    <progressmsec>0</progressmsec>
+    <answermsec>11320</answermsec>
+    <waitmsec>2140</waitmsec>
+    <progress_mediamsec>2120</progress_mediamsec>
+    <flow_billmsec>22060</flow_billmsec>
+    <uduration>22060015</uduration>
+    <billusec>10740021</billusec>
+    <progressusec>0</progressusec>
+    <answerusec>11319994</answerusec>
+    <waitusec>2140002</waitusec>
+    <progress_mediausec>2120034</progress_mediausec>
+    <flow_billusec>22060015</flow_billusec>
+    <sip_hangup_disposition>send_bye</sip_hangup_disposition>
+    <rtp_audio_in_raw_bytes>187480</rtp_audio_in_raw_bytes>
+    <rtp_audio_in_media_bytes>187480</rtp_audio_in_media_bytes>
+    <rtp_audio_in_packet_count>1090</rtp_audio_in_packet_count>
+    <rtp_audio_in_media_packet_count>1090</rtp_audio_in_media_packet_count>
+    <rtp_audio_in_skip_packet_count>11</rtp_audio_in_skip_packet_count>
+    <rtp_audio_in_jitter_packet_count>0</rtp_audio_in_jitter_packet_count>
+    <rtp_audio_in_dtmf_packet_count>0</rtp_audio_in_dtmf_packet_count>
+    <rtp_audio_in_cng_packet_count>0</rtp_audio_in_cng_packet_count>
+    <rtp_audio_in_flush_packet_count>0</rtp_audio_in_flush_packet_count>
+    <rtp_audio_in_largest_jb_size>0</rtp_audio_in_largest_jb_size>
+    <rtp_audio_in_jitter_min_variance>0.61</rtp_audio_in_jitter_min_variance>
+    <rtp_audio_in_jitter_max_variance>400.00</rtp_audio_in_jitter_max_variance>
+    <rtp_audio_in_jitter_loss_rate>0.00</rtp_audio_in_jitter_loss_rate>
+    <rtp_audio_in_jitter_burst_rate>0.00</rtp_audio_in_jitter_burst_rate>
+    <rtp_audio_in_mean_interval>20.00</rtp_audio_in_mean_interval>
+    <rtp_audio_in_flaw_total>0</rtp_audio_in_flaw_total>
+    <rtp_audio_in_quality_percentage>100.00</rtp_audio_in_quality_percentage>
+    <rtp_audio_in_mos>4.50</rtp_audio_in_mos>
+    <rtp_audio_out_raw_bytes>171484</rtp_audio_out_raw_bytes>
+    <rtp_audio_out_media_bytes>171484</rtp_audio_out_media_bytes>
+    <rtp_audio_out_packet_count>997</rtp_audio_out_packet_count>
+    <rtp_audio_out_media_packet_count>997</rtp_audio_out_media_packet_count>
+    <rtp_audio_out_skip_packet_count>0</rtp_audio_out_skip_packet_count>
+    <rtp_audio_out_dtmf_packet_count>0</rtp_audio_out_dtmf_packet_count>
+    <rtp_audio_out_cng_packet_count>0</rtp_audio_out_cng_packet_count>
+    <rtp_audio_rtcp_packet_count>0</rtp_audio_rtcp_packet_count>
+    <rtp_audio_rtcp_octet_count>0</rtp_audio_rtcp_octet_count>
+  </variables>
+  <app_log>
+    <application app_name="set" app_data="callee=7010" app_stamp="1560230118253863"></application>
+    <application app_name="export" app_data="callee=7010" app_stamp="1560230118254537"></application>
+    <application app_name="set" app_data="RECORD_STEREO=true" app_stamp="1560230118255224"></application>
+    <application app_name="record_session" app_data="http://(file=4b3b36af-3d98-4670-bc14-0ee08890d7d6.wav,name=4b3b36af-3d98-4670-bc14-0ee08890d7d6.wav)172.16.2.253:8282/fileupload?path=2019/06/11/13" app_stamp="1560230118261419"></application>
+    <application app_name="transfer" app_data="915121007938 xml default" app_stamp="1560230118263824"></application>
+    <application app_name="set" app_data="callee=915121007938" app_stamp="1560230118290982"></application>
+    <application app_name="export" app_data="callee=915121007938" app_stamp="1560230118291739"></application>
+    <application app_name="export" app_data="sip_h_caller=anonymous" app_stamp="1560230118292691"></application>
+    <application app_name="export" app_data="sip_h_callee=915121007938" app_stamp="1560230118293654"></application>
+    <application app_name="export" app_data="sip_h_ocallId=4b3b36af-3d98-4670-bc14-0ee08890d7d6" app_stamp="1560230118294584"></application>
+    <application app_name="export" app_data="da=true" app_stamp="1560230118295513"></application>
+    <application app_name="set" app_data="effective_caller_id_number=anonymous" app_stamp="1560230118296462"></application>
+    <application app_name="set" app_data="callerDomain=wilcom.com.cn" app_stamp="1560230118297380"></application>
+    <application app_name="export" app_data="callerDomain=wilcom.com.cn" app_stamp="1560230118298266"></application>
+    <application app_name="set" app_data="call_timeout=60" app_stamp="1560230118299245"></application>
+    <application app_name="set" app_data="gateway=avaya" app_stamp="1560230118300187"></application>
+    <application app_name="set" app_data="record_rate=8000" app_stamp="1560230118301156"></application>
+    <application app_name="set" app_data="record_sample_rate=8000" app_stamp="1560230118302043"></application>
+    <application app_name="set" app_data="recording_follow_transfer=true" app_stamp="1560230118303047"></application>
+    <application app_name="set" app_data="record_append=true" app_stamp="1560230118304133"></application>
+    <application app_name="set" app_data="answered_time=" app_stamp="1560230118305138"></application>
+    <application app_name="record_session" app_data="http://(file=4b3b36af-3d98-4670-bc14-0ee08890d7d6.wav,name=4b3b36af-3d98-4670-bc14-0ee08890d7d6.wav)172.16.2.253:8282/fileupload?path=2019/06/11/13" app_stamp="1560230118306340"></application>
+    <application app_name="bridge" app_data="sofia/gateway/avaya/915121007938" app_stamp="1560230118307383"></application>
+  </app_log>
+  <callflow dialplan="xml" unique-id="fda27ede-2bef-401c-acef-85fd33f63071" clone-of="1421157d-bd1d-411e-ac58-f5d4b3c0f7f9" profile_index="2">
+    <extension name="Gateway_Extension" number="915121007938">
+      <application app_name="set" app_data="callee=915121007938"></application>
+      <application app_name="export" app_data="callee=915121007938"></application>
+      <application app_name="export" app_data="sip_h_caller=anonymous"></application>
+      <application app_name="export" app_data="sip_h_callee=915121007938"></application>
+      <application app_name="export" app_data="sip_h_ocallId=${uuid}"></application>
+      <application app_name="export" app_data="da=true"></application>
+      <application app_name="set" app_data="effective_caller_id_number=anonymous"></application>
+      <application app_name="set" app_data="callerDomain=wilcom.com.cn"></application>
+      <application app_name="export" app_data="callerDomain=wilcom.com.cn"></application>
+      <application app_name="set" app_data="call_timeout=60"></application>
+      <application app_name="set" app_data="gateway=avaya"></application>
+      <application app_name="set" app_data="record_rate=8000"></application>
+      <application app_name="set" app_data="record_sample_rate=8000"></application>
+      <application app_name="set" app_data="recording_follow_transfer=true"></application>
+      <application app_name="set" app_data="record_append=true"></application>
+      <application app_name="set" app_data="answered_time="></application>
+      <application app_name="record_session" app_data="http://(file=${uuid}.wav,name=${uuid}.wav)172.16.2.253:8282/fileupload?path=${strftime(%Y/%m/%d/%H)}"></application>
+      <application app_name="bridge" app_data="sofia/gateway/avaya/915121007938"></application>
+    </extension>
+    <caller_profile>
+      <username>anonymous</username>
+      <dialplan>xml</dialplan>
+      <caller_id_name>Gong,baicheng</caller_id_name>
+      <caller_id_number>anonymous</caller_id_number>
+      <callee_id_name>Outbound Call</callee_id_name>
+      <callee_id_number>915121007938</callee_id_number>
+      <ani>anonymous</ani>
+      <aniii></aniii>
+      <network_addr>172.16.0.20</network_addr>
+      <rdnis>7010</rdnis>
+      <destination_number>915121007938</destination_number>
+      <uuid>4b3b36af-3d98-4670-bc14-0ee08890d7d6</uuid>
+      <source>mod_sofia</source>
+      <transfer_source>1560230118:fda27ede-2bef-401c-acef-85fd33f63071:bl_xfer:915121007938/default/xml</transfer_source>
+      <context>default</context>
+      <chan_name>sofia/internal/anonymous@wilcom.com.cn</chan_name>
+      <origination>
+        <origination_caller_profile>
+          <username>anonymous</username>
+          <dialplan>xml</dialplan>
+          <caller_id_name>Gong,baicheng</caller_id_name>
+          <caller_id_number>anonymous</caller_id_number>
+          <callee_id_name>Outbound Call</callee_id_name>
+          <callee_id_number>915121007938</callee_id_number>
+          <ani>anonymous</ani>
+          <aniii></aniii>
+          <network_addr>172.16.0.20</network_addr>
+          <rdnis>7010</rdnis>
+          <destination_number>915121007938</destination_number>
+          <uuid>4b32a965-e2fc-455e-8f46-eb723e8909fd</uuid>
+          <source>mod_sofia</source>
+          <context>default</context>
+          <chan_name>sofia/external/915121007938</chan_name>
+        </origination_caller_profile>
+      </origination>
+      <originatee>
+        <originatee_caller_profile>
+          <username>anonymous</username>
+          <dialplan>xml</dialplan>
+          <caller_id_name>Gong,baicheng</caller_id_name>
+          <caller_id_number>anonymous</caller_id_number>
+          <callee_id_name>Outbound Call</callee_id_name>
+          <callee_id_number>915121007938</callee_id_number>
+          <ani>anonymous</ani>
+          <aniii></aniii>
+          <network_addr>172.16.0.20</network_addr>
+          <rdnis>7010</rdnis>
+          <destination_number>915121007938</destination_number>
+          <uuid>4b32a965-e2fc-455e-8f46-eb723e8909fd</uuid>
+          <source>mod_sofia</source>
+          <context>default</context>
+          <chan_name>sofia/external/915121007938</chan_name>
+        </originatee_caller_profile>
+      </originatee>
+    </caller_profile>
+    <times>
+      <created_time>1560230118216216</created_time>
+      <profile_created_time>1560230118256214</profile_created_time>
+      <progress_time>0</progress_time>
+      <progress_media_time>1560230120336250</progress_media_time>
+      <answered_time>1560230129536210</answered_time>
+      <bridged_time>1560230120356218</bridged_time>
+      <last_hold_time>0</last_hold_time>
+      <hold_accum_time>0</hold_accum_time>
+      <hangup_time>1560230140276231</hangup_time>
+      <resurrect_time>0</resurrect_time>
+      <transfer_time>0</transfer_time>
+    </times>
+  </callflow>
+  <callflow dialplan="XML" unique-id="1421157d-bd1d-411e-ac58-f5d4b3c0f7f9" profile_index="1">
+    <extension name="Local_Extension" number="7010">
+      <application app_name="set" app_data="callee=7010"></application>
+      <application app_name="export" app_data="callee=7010"></application>
+      <application app_name="set" app_data="RECORD_STEREO=true"></application>
+      <application app_name="record_session" app_data="http://(file=${uuid}.wav,name=${uuid}.wav)172.16.2.253:8282/fileupload?path=${strftime(%Y/%m/%d/%H)}"></application>
+      <application app_name="transfer" app_data="915121007938 xml default"></application>
+    </extension>
+    <caller_profile>
+      <username>anonymous</username>
+      <dialplan>XML</dialplan>
+      <caller_id_name>Gong,baicheng</caller_id_name>
+      <caller_id_number>anonymous</caller_id_number>
+      <callee_id_name></callee_id_name>
+      <callee_id_number></callee_id_number>
+      <ani>anonymous</ani>
+      <aniii></aniii>
+      <network_addr>172.16.0.20</network_addr>
+      <rdnis></rdnis>
+      <destination_number>7010</destination_number>
+      <uuid>4b3b36af-3d98-4670-bc14-0ee08890d7d6</uuid>
+      <source>mod_sofia</source>
+      <context>public</context>
+      <chan_name>sofia/internal/anonymous@wilcom.com.cn</chan_name>
+    </caller_profile>
+    <times>
+      <created_time>1560230118216216</created_time>
+      <profile_created_time>1560230118216216</profile_created_time>
+      <progress_time>0</progress_time>
+      <progress_media_time>1560230118256214</progress_media_time>
+      <answered_time>0</answered_time>
+      <bridged_time>0</bridged_time>
+      <last_hold_time>0</last_hold_time>
+      <hold_accum_time>0</hold_accum_time>
+      <hangup_time>0</hangup_time>
+      <resurrect_time>0</resurrect_time>
+      <transfer_time>1560230118256214</transfer_time>
+    </times>
+  </callflow>
+</cdr>
