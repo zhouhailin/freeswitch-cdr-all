@@ -16,6 +16,7 @@ import java.util.List;
 @Accessors(chain = true)
 public class Cdr {
     private String coreUuid;
+    private String switchname;
     private ChannelData channelData;
     private Variables variables;
     private AppLog appLog;

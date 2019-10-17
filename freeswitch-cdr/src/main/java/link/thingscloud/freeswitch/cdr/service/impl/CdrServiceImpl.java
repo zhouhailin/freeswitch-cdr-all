@@ -58,7 +58,7 @@ public class CdrServiceImpl implements CdrService, ApplicationContextAware, Init
 
     private void handleCdr(String xml) throws ParserException {
         Cdr cdr = CdrParser.decodeThenParse(xml);
-        log.info("handleCdr cdr : [{}]", cdr);
+        log.debug("handleCdr cdr : [{}]", cdr);
         cdrHandlers.forEach(cdrHandler -> {
             try {
                 cdrHandler.handleCdr(cdr);

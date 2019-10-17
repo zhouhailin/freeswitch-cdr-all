@@ -26,6 +26,7 @@ import java.util.function.BiConsumer;
 public class CdrParser {
 
     private static final String CORE_UUID = "core-uuid";
+    private static final String SWITCHNAME = "switchname";
 
     private static final String CHANNEL_DATA = "channel_data";
     private static final String STATE = "state";
@@ -104,6 +105,8 @@ public class CdrParser {
         attributes(rootElement, (name, value) -> {
             if (CORE_UUID.equals(name)) {
                 cdr.setCoreUuid(value);
+            }else if (SWITCHNAME.equals(name)) {
+                cdr.setSwitchname(value);
             } else {
                 log.warn("assignCdrElement found other attribute name : [{}], value : [{}], xml : [{}]", name, value, local.get());
             }
