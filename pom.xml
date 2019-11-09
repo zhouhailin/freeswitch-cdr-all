@@ -11,7 +11,7 @@
     </parent>
     <groupId>link.thingscloud</groupId>
     <artifactId>freeswitch-cdr-all</artifactId>
-    <version>1.0.0-BETA1</version>
+    <version>1.0.0-BETA</version>
     <name>freeswitch-cdr-all-${project.version}</name>
     <description>FreeSWITCH CDR Project for Spring Boot</description>
 

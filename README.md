@@ -14,7 +14,7 @@ POM 引入
             <dependency>
                 <groupId>link.thingscloud</groupId>
                 <artifactId>freeswitch-cdr</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
+                <version>1.0.0-SNAPSHOT</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>

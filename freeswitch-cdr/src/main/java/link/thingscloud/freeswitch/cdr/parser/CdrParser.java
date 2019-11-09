@@ -54,7 +54,6 @@ public class CdrParser {
      * <p>
      * &lt;param name=&quot;encode&quot; value=&quot;true&quot;/&gt;
      * <p>
-     * <p>
      * cdr=&lt;?xml&nbsp;version=&quot;1.0&quot;?&gt;
      * <p>
      * uuid=a_12d714e6-3c49-463a-8965-755b8f598032&amp;cdr=&lt;?xml version=&quot;1.0&quot;?&gt;
