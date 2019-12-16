@@ -4,14 +4,14 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
- * <p>CallerProfile class.</p>
+ * <p>OriginatorCallerProfile class.</p>
  *
  * @author : <a href="mailto:ant.zhou@aliyun.com">zhouhailin</a>
  * @version $Id: $Id
  */
 @Data
 @Accessors(chain = true)
-public class CallerProfile {
+public class OriginatorCallerProfile {
     private String username;
     private String dialplan;
     private String callerIdName;
@@ -25,10 +25,6 @@ public class CallerProfile {
     private String destinationNumber;
     private String uuid;
     private String source;
-    private String transferSource;
     private String context;
     private String chanName;
-    private Originator originator;
-    private Originatee originatee;
-    private Origination origination;
 }

@@ -19,7 +19,7 @@ import java.util.function.BiConsumer;
 /**
  * <p>CdrParser class.</p>
  *
- * @author : <a href="mailto:ant.zhou@aliyun.com">zhouhailin</a>
+ * @author : zhouhailin
  * @version $Id: $Id
  */
 @Slf4j
@@ -29,6 +29,7 @@ public class CdrParser {
     private static final String SWITCHNAME = "switchname";
 
     private static final String CHANNEL_DATA = "channel_data";
+    private static final String CALL_STATS = "call-stats";
     private static final String STATE = "state";
     private static final String DIRECTION = "direction";
     private static final String STATE_NUMBER = "state_number";
@@ -39,8 +40,9 @@ public class CdrParser {
 
     private static final String APP_LOG = "app_log";
 
-    private static final String CALLFLOW = "callflow";
+    private static final String HOLD_RECORD = "hold-record";
 
+    private static final String CALLFLOW = "callflow";
 
     private static ThreadLocal<String> local = new ThreadLocal<>();
 
@@ -104,7 +106,7 @@ public class CdrParser {
         attributes(rootElement, (name, value) -> {
             if (CORE_UUID.equals(name)) {
                 cdr.setCoreUuid(value);
-            }else if (SWITCHNAME.equals(name)) {
+            } else if (SWITCHNAME.equals(name)) {
                 cdr.setSwitchname(value);
             } else {
                 log.warn("assignCdrElement found other attribute name : [{}], value : [{}], xml : [{}]", name, value, local.get());
@@ -119,6 +121,11 @@ public class CdrParser {
                     cdr.setChannelData(channelData);
                     assignChannelDataElement(channelData, element);
                     break;
+                case CALL_STATS:
+                    CallStats callStats = new CallStats();
+                    cdr.setCallStats(callStats);
+                    assignCallStatsElement(callStats, element);
+                    break;
                 case VARIABLES:
                     Variables variables = new Variables();
                     cdr.setVariables(variables);
@@ -128,6 +135,11 @@ public class CdrParser {
                     AppLog appLog = new AppLog();
                     cdr.setAppLog(appLog);
                     assignAppLogElement(appLog, element);
+                    break;
+                case HOLD_RECORD:
+                    HoldRecord holdRecord = new HoldRecord();
+                    cdr.setHoldRecord(holdRecord);
+                    assignHoldRecordElement(holdRecord, element);
                     break;
                 case CALLFLOW:
                     Callflow callflow = new Callflow();
@@ -169,8 +181,277 @@ public class CdrParser {
         });
     }
 
+    private static final String AUDIO = "audio";
+
+    private static void assignCallStatsElement(CallStats callStats, Element rootElement) {
+        // call-stats 节点属性赋值
+        elements(rootElement, (name, element) -> {
+            String value = element.getTextTrim();
+            switch (name) {
+                case AUDIO:
+                    Audio audio = new Audio();
+                    callStats.setAudio(audio);
+                    assignAudioElement(audio, element);
+                    break;
+                default:
+                    log.warn("assignCallStatsElement found other element name : [{}], xml : [{}]", name, local.get());
+                    break;
+            }
+        });
+    }
+
+    private static final String INBOUND = "inbound";
+    private static final String OUTBOUND = "outbound";
+    private static final String ERROR_LOG = "error-log";
+
+    private static void assignAudioElement(Audio audio, Element rootElement) {
+        // call-stats - audio 节点属性赋值
+        elements(rootElement, (name, element) -> {
+            String value = element.getTextTrim();
+            switch (name) {
+                case INBOUND:
+                    Inbound inbound = new Inbound();
+                    audio.setInbound(inbound);
+                    assignInboundElement(inbound, element);
+                    break;
+                case OUTBOUND:
+                    Outbound outbound = new Outbound();
+                    audio.setOutbound(outbound);
+                    assignOutboundElement(outbound, element);
+                    break;
+                case ERROR_LOG:
+                    ErrorLog errorLog = new ErrorLog();
+                    audio.setErrorLog(errorLog);
+                    assignErrorLogElement(errorLog, element);
+                    break;
+                default:
+                    log.warn("assignAudioElement found other element name : [{}], xml : [{}]", name, local.get());
+                    break;
+            }
+        });
+    }
+
+
+    private static final String RAW_BYTES = "raw_bytes";
+    private static final String MEDIA_BYTES = "media_bytes";
+    private static final String PACKET_COUNT = "packet_count";
+    private static final String MEDIA_PACKET_COUNT = "media_packet_count";
+    private static final String SKIP_PACKET_COUNT = "skip_packet_count";
+    private static final String JITTER_PACKET_COUNT = "jitter_packet_count";
+    private static final String DTMF_PACKET_COUNT = "dtmf_packet_count";
+    private static final String CNG_PACKET_COUNT = "cng_packet_count";
+    private static final String FLUSH_PACKET_COUNT = "flush_packet_count";
+    private static final String LARGEST_JB_SIZE = "largest_jb_size";
+    private static final String JITTER_MIN_VARIANCE = "jitter_min_variance";
+    private static final String JITTER_MAX_VARIANCE = "jitter_max_variance";
+    private static final String JITTER_LOSS_RATE = "jitter_loss_rate";
+    private static final String JITTER_BURST_RATE = "jitter_burst_rate";
+    private static final String MEAN_INTERVAL = "mean_interval";
+    private static final String FLAW_TOTAL = "flaw_total";
+    private static final String QUALITY_PERCENTAGE = "quality_percentage";
+    private static final String MOS = "mos";
+
+    private static void assignInboundElement(Inbound inbound, Element rootElement) {
+        // call-stats - audio - inbound 节点属性赋值
+        elements(rootElement, (name, element) -> {
+            String value = element.getTextTrim();
+            switch (name) {
+                case RAW_BYTES:
+                    inbound.setRawBytes(value);
+                    break;
+                case MEDIA_BYTES:
+                    inbound.setMediaBytes(value);
+                    break;
+                case PACKET_COUNT:
+                    inbound.setPacketCount(value);
+                    break;
+                case MEDIA_PACKET_COUNT:
+                    inbound.setMediaPacketCount(value);
+                    break;
+                case SKIP_PACKET_COUNT:
+                    inbound.setSkipPacketCount(value);
+                    break;
+                case JITTER_PACKET_COUNT:
+                    inbound.setJitterPacketCount(value);
+                    break;
+                case DTMF_PACKET_COUNT:
+                    inbound.setDtmfPacketCount(value);
+                    break;
+                case CNG_PACKET_COUNT:
+                    inbound.setCngPacketCount(value);
+                    break;
+                case FLUSH_PACKET_COUNT:
+                    inbound.setFlushPacketCount(value);
+                    break;
+                case LARGEST_JB_SIZE:
+                    inbound.setLargestJbSize(value);
+                    break;
+                case JITTER_MIN_VARIANCE:
+                    inbound.setJitterMinVariance(value);
+                    break;
+                case JITTER_MAX_VARIANCE:
+                    inbound.setJitterMaxVariance(value);
+                    break;
+                case JITTER_LOSS_RATE:
+                    inbound.setJitterLossRate(value);
+                    break;
+                case JITTER_BURST_RATE:
+                    inbound.setJitterBurstRate(value);
+                    break;
+                case MEAN_INTERVAL:
+                    inbound.setMeanInterval(value);
+                    break;
+                case FLAW_TOTAL:
+                    inbound.setFlawTotal(value);
+                    break;
+                case QUALITY_PERCENTAGE:
+                    inbound.setQualityPercentage(value);
+                    break;
+                case MOS:
+                    inbound.setMos(value);
+                    break;
+                default:
+                    log.warn("assignInboundElement found other element name : [{}], xml : [{}]", name, local.get());
+                    break;
+            }
+        });
+    }
+
+    private static final String RTCP_PACKET_COUNT = "rtcp_packet_count";
+    private static final String RTCP_OCTET_COUNT = "rtcp_octet_count";
+
+    private static void assignOutboundElement(Outbound outbound, Element rootElement) {
+        // call-stats - audio - outbound 节点属性赋值
+        elements(rootElement, (name, element) -> {
+            String value = element.getTextTrim();
+            switch (name) {
+                case RAW_BYTES:
+                    outbound.setRawBytes(value);
+                    break;
+                case MEDIA_BYTES:
+                    outbound.setMediaBytes(value);
+                    break;
+                case PACKET_COUNT:
+                    outbound.setPacketCount(value);
+                    break;
+                case MEDIA_PACKET_COUNT:
+                    outbound.setMediaPacketCount(value);
+                    break;
+                case SKIP_PACKET_COUNT:
+                    outbound.setSkipPacketCount(value);
+                    break;
+                case DTMF_PACKET_COUNT:
+                    outbound.setDtmfPacketCount(value);
+                    break;
+                case CNG_PACKET_COUNT:
+                    outbound.setCngPacketCount(value);
+                    break;
+                case RTCP_PACKET_COUNT:
+                    outbound.setRtcpPacketCount(value);
+                    break;
+                case RTCP_OCTET_COUNT:
+                    outbound.setRtcpOctetCount(value);
+                    break;
+                default:
+                    log.warn("assignOutboundElement found other element name : [{}], xml : [{}]", name, local.get());
+                    break;
+            }
+        });
+    }
+
+    private static final String ERROR_PERIOD = "error-period";
+
+    private static void assignErrorLogElement(ErrorLog errorLog, Element rootElement) {
+        // call-stats - audio - error-log 节点属性赋值
+        elements(rootElement, (name, element) -> {
+            String value = element.getTextTrim();
+            switch (name) {
+                case ERROR_PERIOD:
+                    ErrorPeriod errorPeriod = new ErrorPeriod();
+                    errorLog.addErrorPeriod(errorPeriod);
+                    assignErrorPeriodElement(errorPeriod, element);
+                    break;
+                default:
+                    log.warn("assignErrorLogElement found other element name : [{}], xml : [{}]", name, local.get());
+                    break;
+            }
+        });
+    }
+
+    private static final String START = "start";
+    private static final String STOP = "stop";
+    private static final String FLAWS = "flaws";
+    private static final String CONSECUTIVE_FLAWS = "consecutive-flaws";
+    private static final String DURATION_MSEC = "duration-msec";
+
+    private static void assignErrorPeriodElement(ErrorPeriod errorPeriod, Element rootElement) {
+        // call-stats - audio - error-log 节点属性赋值
+        elements(rootElement, (name, element) -> {
+            String value = element.getTextTrim();
+            switch (name) {
+                case START:
+                    errorPeriod.setStart(value);
+                    break;
+                case STOP:
+                    errorPeriod.setStop(value);
+                    break;
+                case FLAWS:
+                    errorPeriod.setFlaws(value);
+                    break;
+                case CONSECUTIVE_FLAWS:
+                    errorPeriod.setConsecutiveFlaws(value);
+                    break;
+                case DURATION_MSEC:
+                    errorPeriod.setDurationMsec(value);
+                    break;
+                default:
+                    log.warn("assignErrorPeriodElement found other element name : [{}], xml : [{}]", name, local.get());
+                    break;
+            }
+        });
+    }
+
     private static void assignVariablesElement(Variables variables, Element rootElement) {
         elements(rootElement, (name, element) -> variables.putVariable(name, element.getTextTrim()));
+    }
+
+    private static final String HOLD = "hold";
+
+    private static void assignHoldRecordElement(HoldRecord holdRecord, Element rootElement) {
+        List<Hold> holds = new ArrayList<>(4);
+        holdRecord.setHolds(holds);
+        elements(rootElement, (name, element) -> {
+            if (HOLD.equals(name)) {
+                assignHoldElement(holds, element);
+            } else {
+                log.warn("assignHoldRecordElement found other element name : [{}], xml : [{}]", name, local.get());
+            }
+        });
+    }
+
+    private static final String ON = "on";
+    private static final String OFF = "off";
+    private static final String BRIDGED_TO = "bridged-to";
+
+    private static void assignHoldElement(final List<Hold> holds, final Element rootElement) {
+        Hold hold = new Hold();
+        attributes(rootElement, (name, value) -> {
+            switch (name) {
+                case ON:
+                    hold.setOn(NumberUtil.toLong(value));
+                    break;
+                case OFF:
+                    hold.setOff(NumberUtil.toLong(value));
+                    break;
+                case BRIDGED_TO:
+                    hold.setBridgedTo(value);
+                    break;
+                default:
+                    log.warn("assignHoldElement found other attribute name : [{}], value : [{}], xml : [{}]", name, value, local.get());
+                    break;
+            }
+        });
+        holds.add(hold);
     }
 
     private static final String APPLICATION = "application";
@@ -315,6 +596,7 @@ public class CdrParser {
     private static final String TRANSFER_SOURCE = "transfer_source";
     private static final String CONTEXT = "context";
     private static final String CHAN_NAME = "chan_name";
+    private static final String ORIGINATOR = "originator";
     private static final String ORIGINATION = "origination";
     private static final String ORIGINATEE = "originatee";
 
@@ -371,6 +653,11 @@ public class CdrParser {
                 case CHAN_NAME:
                     callerProfile.setChanName(value);
                     break;
+                case ORIGINATOR:
+                    Originator originator = new Originator();
+                    callerProfile.setOriginator(originator);
+                    assignOriginatorElement(originator, element);
+                    break;
                 case ORIGINATION:
                     Origination origination = new Origination();
                     callerProfile.setOrigination(origination);
@@ -387,6 +674,77 @@ public class CdrParser {
             }
         });
 
+    }
+
+    private static final String ORIGINATOR_CALLER_PROFILE = "originator_caller_profile";
+
+    private static void assignOriginatorElement(Originator originator, Element rootElement) {
+        elements(rootElement, (name, element) -> {
+            if (ORIGINATOR_CALLER_PROFILE.equals(name)) {
+                OriginatorCallerProfile originatorCallerProfile = new OriginatorCallerProfile();
+                originator.setOriginatorCallerProfile(originatorCallerProfile);
+                assignOriginatorCallerProfileElement(originatorCallerProfile, element);
+            } else {
+                log.warn("assignOriginatorElement found other element name : [{}], xml : [{}]", name, local.get());
+            }
+        });
+    }
+
+    private static void assignOriginatorCallerProfileElement(OriginatorCallerProfile originatorCallerProfile, Element rootElement) {
+        elements(rootElement, (name, element) -> {
+            String value = element.getTextTrim();
+            switch (name) {
+                case USERNAME:
+                    originatorCallerProfile.setUsername(value);
+                    break;
+                case DIALPLAN:
+                    originatorCallerProfile.setDialplan(value);
+                    break;
+                case CALLER_ID_NAME:
+                    originatorCallerProfile.setCallerIdName(value);
+                    break;
+                case CALLER_ID_NUMBER:
+                    originatorCallerProfile.setCallerIdNumber(value);
+                    break;
+                case CALLEE_ID_NAME:
+                    originatorCallerProfile.setCalleeIdName(value);
+                    break;
+                case CALLEE_ID_NUMBER:
+                    originatorCallerProfile.setCalleeIdNumber(value);
+                    break;
+                case ANI:
+                    originatorCallerProfile.setAni(value);
+                    break;
+                case ANIII:
+                    originatorCallerProfile.setAniii(value);
+                    break;
+                case NETWORK_ADDR:
+                    originatorCallerProfile.setNetworkAddr(value);
+                    break;
+                case RDNIS:
+                    originatorCallerProfile.setRdnis(value);
+                    break;
+                case DESTINATION_NUMBER:
+                    originatorCallerProfile.setDestinationNumber(value);
+                    break;
+                case UUID:
+                    originatorCallerProfile.setUuid(value);
+                    break;
+                case SOURCE:
+                    originatorCallerProfile.setSource(value);
+                    break;
+                case CONTEXT:
+                    originatorCallerProfile.setContext(value);
+                    break;
+                case CHAN_NAME:
+                    originatorCallerProfile.setChanName(value);
+                    break;
+                default:
+                    log.warn("assignOriginationCallerProfileElement found other element name : [{}], xml : [{}]", name, local.get());
+                    break;
+
+            }
+        });
     }
 
     private static final String ORIGINATION_CALLER_PROFILE = "origination_caller_profile";

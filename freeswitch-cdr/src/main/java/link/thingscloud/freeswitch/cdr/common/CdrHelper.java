@@ -3,9 +3,10 @@ package link.thingscloud.freeswitch.cdr.common;
 import link.thingscloud.freeswitch.cdr.domain.Cdr;
 import link.thingscloud.freeswitch.cdr.util.CdrDecodeUtil;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.codec.DecoderException;
-import org.apache.commons.codec.binary.Hex;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.tuple.ImmutablePair;
+
+import static org.apache.commons.lang3.StringUtils.EMPTY;
 
 /**
  * <p>CdrHelper class.</p>
@@ -34,18 +35,17 @@ public class CdrHelper {
      * @param cdr a {@link link.thingscloud.freeswitch.cdr.domain.Cdr} object.
      * @return a {@link java.lang.String} object.
      */
-    public static String getUserData(Cdr cdr) {
+    public static ImmutablePair<String, String> getUserData(Cdr cdr) {
         String userToUser = cdr.getVariables().getVariableTable().get(SIP_H_USER_TO_USER);
         if (StringUtils.isBlank(userToUser)) {
-            return StringUtils.EMPTY;
+            return new ImmutablePair<>(EMPTY, EMPTY);
         }
-        String userDataHex = StringUtils.substring(StringUtils.replace(userToUser, "%3Bencoding%3Dhex", StringUtils.EMPTY),
-                "04FA08006424BC5CF89291C808".length());
+
         try {
-            return new String(Hex.decodeHex(userDataHex));
-        } catch (DecoderException e) {
-            log.warn("getUserData decodeHex userDataHex : [{}]", userDataHex, e);
-            return StringUtils.EMPTY;
+            return AvayaHelper.decode(userToUser);
+        } catch (Exception e) {
+            log.warn("getUserData decodeHex userToUser : [{}]", userToUser, e);
+            return new ImmutablePair<>(EMPTY, EMPTY);
         }
     }
 
@@ -59,4 +59,6 @@ public class CdrHelper {
     public static String decode(String str) {
         return CdrDecodeUtil.decode(str);
     }
+
+
 }

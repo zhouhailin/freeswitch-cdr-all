@@ -18,8 +18,10 @@ public class Cdr {
     private String coreUuid;
     private String switchname;
     private ChannelData channelData;
+    private CallStats callStats;
     private Variables variables;
     private AppLog appLog;
+    private HoldRecord holdRecord;
     private List<Callflow> callflows;
 
     /**

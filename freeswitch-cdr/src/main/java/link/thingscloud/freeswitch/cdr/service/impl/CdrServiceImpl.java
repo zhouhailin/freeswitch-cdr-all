@@ -85,9 +85,7 @@ public class CdrServiceImpl implements CdrService, ApplicationContextAware, Init
         }
     }
 
-    /**
-     * {@inheritDoc}
-     */
+    /** {@inheritDoc} */
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) {
         this.applicationContext = applicationContext;
