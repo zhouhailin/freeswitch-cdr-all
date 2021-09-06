@@ -1,5 +1,6 @@
 # FreeSWITCH CDR ALL
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/4af5b27cd33340f990d01b009ff15a55)](https://app.codacy.com/gh/zhouhailin/freeswitch-cdr-all?utm_source=github.com&utm_medium=referral&utm_content=zhouhailin/freeswitch-cdr-all&utm_campaign=Badge_Grade_Settings)
 [![Jdk Version](https://img.shields.io/badge/JDK-1.8-green.svg)](https://img.shields.io/badge/JDK-1.8-green.svg)
 [![License](https://img.shields.io/badge/license-Apache%202-4EB1BA.svg)](https://www.apache.org/licenses/LICENSE-2.0.html)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/link.thingscloud/freeswitch-cdr-all/badge.svg)](https://maven-badges.herokuapp.com/maven-central/link.thingscloud/freeswitch-esl-all/)
